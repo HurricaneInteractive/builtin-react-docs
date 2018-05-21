@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 // Base CSS
-import './index.css'
+// import './index.css'
 
 // Prism CSS
 require("prismjs/themes/prism-tomorrow.css");
@@ -25,6 +25,9 @@ const Layout = ({ children, data }) => {
                     { name: 'description', content: 'Sample' },
                     { name: 'keywords', content: 'sample, something' },
                 ]}
+                link={[
+                    { href: 'https://fonts.googleapis.com/css?family=Nunito:400,700|Roboto+Mono', rel: 'stylesheet' }
+                ]}
             />
             <div className="page">
                 <Navigation nav={data} />
@@ -44,7 +47,9 @@ export default Layout
 
 export const pageQuery = graphql `
     query IndexQuery {
-        allMarkdownRemark {
+        allMarkdownRemark (
+            sort: { order: ASC, fields: [frontmatter___title]}
+        ) {
             edges {
                 node {
                     id

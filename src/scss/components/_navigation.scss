@@ -1,3 +1,44 @@
 .navigation {
-    background: red;
+    border-right: 1px solid darken($smoke, 2%);
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    .logo {
+        text-align: center;
+        padding: 50px 25px;
+        border-bottom: 1px solid darken($smoke, 2%);
+        h2 {
+            margin: 0;
+            font-size: $h3;
+            font-weight: normal;
+            color: $grey;
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+        }
+    }
+    .links {
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            li {
+                margin: 0;
+                a {
+                    text-decoration: none;
+                    display: block;
+                    padding: 20px 30px;
+                    border-bottom: 1px solid darken($smoke, 2%);
+                    color: $grey;
+                    &:hover {
+                        color: $black;
+                    }
+                }
+            }
+        }
+    }
 }

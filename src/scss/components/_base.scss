@@ -1,0 +1,101 @@
+body {
+    font-size: $basefontsize;
+    margin: 0;
+    padding: 0;
+    font-family: $font-family;
+    color: $grey;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+    line-height: 1.25;
+    font-weight: bold;
+    color: $black;
+    margin: 22px 0 8px;
+}
+
+h1 {
+    font-size: $h1;
+}
+
+h2 {
+    font-size: $h2;
+}
+
+h3 {
+    font-size: $h3;
+}
+
+h4 {
+    font-size: $h4;
+}
+
+p, li {
+    font-size: $basefontsize;
+    margin: 10px 0 20px;
+    line-height: 1.5;
+    font-weight: normal;
+}
+
+code, pre {
+    font-family: $code-family;
+}
+
+.gatsby-highlight pre[class*="language-"] {
+    background: #111 url('../static/code.svg') repeat top left / auto auto;
+    margin: 30px 0px;
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    text-align: left;
+    table-layout: fixed;
+    border-spacing: 0;
+    th, td {
+        code {
+            background: $lightBG;
+            padding: 5px;
+            border-radius: 5px;
+            line-height: 1;
+            border: 1px solid $lightGrey;
+            color: $black;
+        }
+    }
+    thead {
+        th {
+            padding: 0 15px 20px;
+            border-bottom: 1px solid $lightGrey;
+            &:last-child {
+                width: 50%;
+            }
+        }
+    }
+    tbody {
+        color: $grey;
+        td {
+            padding: 15px;
+        }
+        tr {
+            transition: background-color 250ms ease-in-out;
+            &:nth-child(even) {
+                background-color: #f2f2f2;
+                td {
+                    border-color: $lightGrey;
+                }
+            }
+            &:hover {
+                background-color: #eee;
+                td {
+                    border-color: $lightGrey;
+                    color: $black;
+                }
+            }
+        }
+    }
+}

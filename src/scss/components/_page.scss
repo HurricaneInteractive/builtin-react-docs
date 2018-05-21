@@ -1,5 +1,11 @@
 .page {
     display: grid;
-    grid-template-columns: 300px auto;
     height: 100vh;
+    padding-left: 300px;
+    .documentation-wrapper {
+        padding: 80px;
+        margin: 0 auto;
+        max-width: 900px;
+        width: 100%;
+    }
 }

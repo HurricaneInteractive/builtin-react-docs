@@ -1,7 +1,27 @@
 .doc-container {
     .doc {
         h1 {
-            margin: 0 0 75px;
+            margin: 0 0 40px;
+            color: $blue;
+            font-weight: normal;
+        }
+        h4 {
+            margin-bottom: 30px;
+            color: $grey;
+        }
+        hr {
+            border: none;
+            height: 1px;
+            background: $smoke;
+            margin: 25px 0;
+        }
+        :not(pre) > code[class*="language-t"], pre[class*="language-t"] {
+            background: #ededed;
+            padding: 5px;
+            border-radius: 5px;
+            line-height: 1;
+            border: 1px solid $lightGrey;
+            color: $grey;
         }
     }
 }

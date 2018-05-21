@@ -15,7 +15,7 @@ const Navigation = (props) => {
                     {
                         posts.map(({ node: post }) => {
                             return (
-                                <li key={post.id}><Link to={post.frontmatter.path}>{post.frontmatter.title}</Link></li>
+                                <li key={post.id}><Link activeClassName="active" to={post.frontmatter.path}>{post.frontmatter.title}</Link></li>
                             )
                         })
                     }

@@ -40,9 +40,27 @@ p, li {
     font-weight: normal;
 }
 
+a {
+    color: $purple;
+    text-decoration: none;
+}
+
+code {
+    background: $smoke;
+    padding: 5px;
+    border-radius: 5px;
+    line-height: 1;
+    border: 1px solid $lightGrey;
+    color: $grey;
+    display: inline-block;
+}
+
 .language-jsx {
     code, pre, code[class*="language-"], pre[class*="language-"] {
         font-family: $code-family;
+        border: none;
+        padding: 0;
+        background: transparent;
     }
 }
 

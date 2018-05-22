@@ -5,21 +5,70 @@ const Navigation = (props) => {
     
     const { edges: posts } = props.nav.allMarkdownRemark;
 
+    let topLevel = [], elements = [], components = [];
+
+    posts.forEach(({node : post}) => {
+        let tag = post.frontmatter.tags;
+        if (tag !== null) {
+            if (tag.indexOf('element') !== -1) {
+                elements.push(post);
+                return false;
+            }
+            else if (tag.indexOf('component') !== -1) {
+                components.push(post);
+                return false;
+            }
+        } else {
+            topLevel.push(post);
+        }
+    });
+
+    const NavigationStructure = [
+        {
+            title: "Utility",
+            nav: topLevel
+        },
+        {
+            title: "Elements",
+            nav: elements
+        },
+        {
+            title: 'Components',
+            nav: components
+        }
+    ]
+
+    const toggleUl = (e) => {
+        e.preventDefault();
+        let parent = e.target.parentNode;
+        let ul = parent.querySelector('ul');
+        ul.classList.toggle('toggled');
+    }
+
     return (
         <div className="navigation">
             <div className="logo">
                 <h2><Link to="/">builtin react</Link></h2>
             </div>
             <nav className="links">
-                <ul>
-                    {
-                        posts.map(({ node: post }) => {
+                {
+                    NavigationStructure.map((nav, i) => {
+                        if (nav.nav.length > 0) {
                             return (
-                                <li key={post.id}><Link activeClassName="active" to={post.frontmatter.path}>{post.frontmatter.title}</Link></li>
+                                <div className="nav-section" key={i}>
+                                    <p onClick={(e) => toggleUl(e)}>{nav.title}</p>
+                                    <ul>
+                                        {
+                                            nav.nav.map((item, i) => (
+                                                <li key={item.id}><Link activeClassName="active" to={item.frontmatter.path}>{item.frontmatter.title}</Link></li>
+                                            ))
+                                        }
+                                    </ul>
+                                </div>
                             )
-                        })
-                    }
-                </ul>
+                        }
+                    })
+                }
             </nav>
         </div>
     )

@@ -1,6 +1,6 @@
 module.exports = {
     siteMetadata: {
-        title: 'Gatsby Default Starter',
+        title: 'builtin-react | React Component Library',
     },
     plugins: [
         'gatsby-plugin-react-helmet',
@@ -25,6 +25,12 @@ module.exports = {
                         }
                     }
                 ]
+            }
+        },
+        {
+            resolve: `gatsby-plugin-google-analytics`,
+            options: {
+                trackingId: 'UA-114425721-3'
             }
         }
     ],

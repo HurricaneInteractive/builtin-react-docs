@@ -15,15 +15,14 @@ import '../scss/main.scss';
 import Navigation from '../components/Navigation'
 
 const Layout = ({ children, data }) => {
-
-    console.log(data);
     return (
         <div>
             <Helmet
                 title={data.site.siteMetadata.title}
                 meta={[
-                    { name: 'description', content: 'Sample' },
-                    { name: 'keywords', content: 'sample, something' },
+                    { name: 'description', content: 'Collection of React Components that can be used to quickly create good looking prototypes.' },
+                    { name: 'keywords', content: 'react, component library, react prototype, reactjs, styled components, quick react prototypes' },
+                    { name: 'robots', content: 'index, follow'}
                 ]}
                 link={[
                     { href: 'https://fonts.googleapis.com/css?family=Nunito:400,700|Roboto+Mono', rel: 'stylesheet' }

@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from "gatsby-link";
+import { ButtonPill, palette } from 'builtin-react';
 
 const Navigation = (props) => {
     
@@ -60,7 +61,12 @@ const Navigation = (props) => {
                                     <ul>
                                         {
                                             nav.nav.map((item, i) => (
-                                                <li key={item.id}><Link activeClassName="active" to={item.frontmatter.path}>{item.frontmatter.title}</Link></li>
+                                                <li key={item.id}>
+                                                    <Link activeClassName="active" to={item.frontmatter.path}>
+                                                        {item.frontmatter.title}
+                                                        { item.frontmatter.comingSoon ? <ButtonPill theme={{ pillFill: palette.lightGrey, pillFont: palette.grey }}>coming soon</ButtonPill> : '' }
+                                                    </Link>
+                                                </li>
                                             ))
                                         }
                                     </ul>

@@ -2,6 +2,7 @@
 path: "/elements/headings"
 date: "2018-18-05T14:44:00:000Z"
 title: "Headings"
+tags: ["element"]
 ---
 
 Use headings to separate sections of your page. Currently `builtin-react` supports four heading types. It functions the same as a normal `<h*>` tag. It supports two optional `props` to allow for customisation and theming.

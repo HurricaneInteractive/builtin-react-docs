@@ -9,6 +9,7 @@ const IndexPage = () => (
         <code>npm install builtin-react</code>
         <Separator />
         <Text>Builtin React is a component library created using <a href="https://www.styled-components.com/">styled-components</a>. It will enable you to create layouts quickly. The components have default styling which makes your project look good while providing you with the flexibility to easily override these styles.</Text>
+        <Text>The library is split up into two main parts. Elements and Components. Elements are small building blocks to layout your page and construct the varies components that make up your application. Components are made up of the different Elements and offer more extensive customisation and functionality.</Text>
         <H4>Check out the Package</H4>
         <ButtonLink 
             theme={{ buttonFill: '#cb3837' }} 

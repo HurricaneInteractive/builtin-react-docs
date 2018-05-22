@@ -28,4 +28,4 @@ const theme = {
 | Name      | Type    | Default    | Description                                |
 | --------  | ------- | ---------- | ------------------------------------------ |
 | className | string  | null       | Custom class name to override css          |
-| theme     | object  | null       | Used to override the colour of the heading |
+| theme     | object  | null       | Used to change the theme of the component  |

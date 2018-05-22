@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from "gatsby-link";
 import { ButtonPill, palette } from 'builtin-react';
+import logo from '../static/builtin-logo.svg';
 
 const Navigation = (props) => {
     
@@ -49,7 +50,7 @@ const Navigation = (props) => {
     return (
         <div className="navigation">
             <div className="logo">
-                <h2><Link to="/">builtin react</Link></h2>
+                <h1><span>builtin-react</span><Link to="/"><img src={logo} alt="builtin react logo" /></Link></h1>
             </div>
             <nav className="links">
                 {
@@ -58,7 +59,7 @@ const Navigation = (props) => {
                             return (
                                 <div className="nav-section" key={i}>
                                     <p onClick={(e) => toggleUl(e)}>{nav.title}</p>
-                                    <ul>
+                                    <ul className={ i === 0 ? 'toggled' : '' }>
                                         {
                                             nav.nav.map((item, i) => (
                                                 <li key={item.id}>
@@ -76,6 +77,7 @@ const Navigation = (props) => {
                     })
                 }
             </nav>
+            <p className="credit">Created by <a href="https://www.winkingowl.digital/">WinkingOwl Digital</a></p>
         </div>
     )
 }

@@ -14,6 +14,8 @@ import '../scss/main.scss';
 // Structure Components
 import Navigation from '../components/Navigation'
 
+import favicon from '../static/builtin-favicon.png'
+
 const Layout = ({ children, data }) => {
     return (
         <div>
@@ -25,14 +27,17 @@ const Layout = ({ children, data }) => {
                     { name: 'robots', content: 'index, follow'}
                 ]}
                 link={[
-                    { href: 'https://fonts.googleapis.com/css?family=Nunito:400,700|Roboto+Mono', rel: 'stylesheet' }
+                    { href: 'https://fonts.googleapis.com/css?family=Nunito:400,700|Roboto+Mono', rel: 'stylesheet' },
+                    { href: favicon, type: 'image/png', rel: 'icon' }
                 ]}
-            />
+            >
+                <html lang="en" />
+            </Helmet>
             <div className="page">
                 <Navigation nav={data} />
-                <div className="documentation-wrapper">
+                <section className="documentation-wrapper">
                     {children()}
-                </div>
+                </section>
             </div>
         </div>
     )

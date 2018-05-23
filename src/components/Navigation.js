@@ -51,6 +51,9 @@ const Navigation = (props) => {
         <div className="navigation">
             <div className="logo">
                 <h1><span>builtin-react</span><Link to="/"><img src={logo} alt="builtin react logo" /></Link></h1>
+                <ButtonPill className="version" theme={{
+                    pillFill: palette.purple
+                }}>v0.2.4</ButtonPill>
             </div>
             <nav className="links">
                 {

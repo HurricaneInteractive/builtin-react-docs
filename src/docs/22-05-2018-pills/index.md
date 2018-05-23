@@ -16,7 +16,8 @@ import { Pill, ButtonPill } from 'buitlin-react';
 // Using Override theme
 <ButtonPill theme={{
     pillFill: 'blue',
-    pillFont: 'white'
+    pillFont: 'white',
+    fontSize: '14px'
 }}>Blue Pill</ButtonPill>
 ```
 

@@ -15,7 +15,7 @@ import { palette, Button } from 'builtin-react';
 }}>Purple Button</Button>
 ```
 
-#### Avaiable Colours
+#### Available Colours
 | Name      | Hex Code    |
 | --------  | ----------- |
 | white     | #FFFFFF     |

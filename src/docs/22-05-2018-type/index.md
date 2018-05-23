@@ -16,7 +16,8 @@ import { Text } from 'builtin-react'
 
 // Changing the color
 <Text theme={{
-    font: 'pink'
+    font: 'pink',
+    fontSize: '21px'
 }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Text>
 ```
 

@@ -16,7 +16,8 @@ import { Button, ButtonLink } from 'builtin-react'
 // Override theme
 const theme = {
     buttonFill: '#EB1244',
-    buttonFont: 'white'
+    buttonFont: 'white',
+    fontSize: '16px'
 };
 <ButtonLink 
     href="https://www.builtin-react.com/" 

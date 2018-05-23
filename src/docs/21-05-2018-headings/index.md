@@ -15,7 +15,8 @@ import { H1, H2, H3, H4 } from 'builtin-react'
 
 // Override theme
 const theme = {
-    heading: '#EB1244'
+    heading: '#EB1244',
+    fontSize: '30px'
 };
 <H2 theme={theme}>With Override theme</H2>
 ```
